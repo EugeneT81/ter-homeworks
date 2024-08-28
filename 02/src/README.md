@@ -2,22 +2,16 @@
 
 1.В файле variables.tf определены типы переменных и некоторые дефолтные значения.
 
-2.
-eugene@Ubuntu22LTS:~$ ls -a .authorized_key.json 
+2.eugene@Ubuntu22LTS:~$ ls -a .authorized_key.json 
 .authorized_key.json
 
 3. ssh-keygen -t ed25519
 
 
-4.
-а)Закоментировал переменную token, т.к используется метод "service_account_key_file = file("~/.authorized_key.json")"
+4.а)Закоментировал переменную token, т.к используется метод "service_account_key_file = file("~/.authorized_key.json")"
 
-#variable "token" {
-#  type        = string
-#  description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
-#}
 
-б)Указал корретный family main.tf:
+б)Указал корректный family main.tf:
 
 data "yandex_compute_image" "ubuntu" {
   family = "ubuntu-2004-lts-oslogin"
