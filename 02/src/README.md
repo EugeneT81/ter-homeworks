@@ -112,10 +112,12 @@ variable "vm_web_core_fraction" {
 
 
 
-[text](README.md)
+![alt text](<ter app no change.png>)
 
 
 Задание 3
+
+
 
 
 
