@@ -71,6 +71,9 @@ variables.tf:
 
 Задание 3
 
+Добавил необходимые переменные в файл "vms_platform.tf", "variables.tf", "main.tf"
+
+![alt text](2vms.png)
 
 
 

@@ -34,6 +34,24 @@ variable "vpc_name" {
 }
 
 
+variable "db_zone" {
+  type        = string
+  default     = "ru-central1-b"
+  description = "https://cloud.yandex.ru/docs/overview/concepts/geo-scope"
+}
+
+
+variable "vpc_db_name" {
+  type        = string
+  default     = "database"
+  description = "DB VPC network & subnet name"
+}
+
+variable "db_cidr" {
+  type        = list(string)
+  default     = ["10.0.2.0/24"]
+  description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
+}  
 ###ssh vars
 
 variable "vms_ssh_root_key" {
@@ -43,38 +61,4 @@ variable "vms_ssh_root_key" {
 }
 
 
-variable "vm_web_family" {
-  type        = string
-  default     = "ubuntu-2004-lts-oslogin"
-  description = "ubuntu image"
-}
 
-variable "vm_web_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "vm name"
-}
-
-variable "vm_web_platform_id" {
-  type        = string
-  default     = "standard-v1"
-  description = "vm id"
-}
-
-variable "vm_web_cores" {
-  type        = string
-  default     = "2"
-  description = "vCPU numbers"
-}
-
-variable "vm_web_memory" {
-  type        = string
-  default     = "1"
-  description = "RAM"
-}
-
-variable "vm_web_core_fraction" {
-  type        = string
-  default     = "5"
-  description = "vCPU core_fraction"
-}
