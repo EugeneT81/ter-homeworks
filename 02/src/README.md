@@ -75,6 +75,10 @@ variables.tf:
 
 ![alt text](2vms.png)
 
+Задание 4
+
+![alt text](output.png)
+
 
 
 
