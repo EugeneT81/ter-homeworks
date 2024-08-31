@@ -60,5 +60,9 @@ variable "vms_ssh_root_key" {
   description = "ssh-keygen -t ed25519"
 }
 
+variable "project" {  default = "netology-develop-platform"}
+variable "vm_web" {  default = "web"}
+variable "vm_db" {  default = "db"}
+
 
 

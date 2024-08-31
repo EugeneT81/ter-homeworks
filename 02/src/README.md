@@ -79,6 +79,38 @@ variables.tf:
 
 ![alt text](output.png)
 
+Задание 5
+
+
+locals.tf:
+
+locals {  
+vm_web = "${var.project}-${var.vm_web}"  
+vm_db = "${var.project}-${var.vm_db}"
+}
+
+
+variables.tf:
+
+variable "project" {  default = "netology-develop-platform"}
+variable "vm_web" {  default = "web"}
+variable "vm_db" {  default = "db"}
+
+main.tf:
+
+resource "yandex_compute_instance" "platfo
+rm" {
+  name        = local.vm_web
+  
+resource "yandex_compute_instance" "platform2" {
+  name        = local.vm_db
+
+
+![alt text](VM2_1.png)
+
+
+Задание 6
+
 
 
 
