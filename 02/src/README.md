@@ -109,7 +109,7 @@ resource "yandex_compute_instance" "platform2" {
 ![alt text](VM2_1.png)
 
 
-Задание 6
+
 
 
 
