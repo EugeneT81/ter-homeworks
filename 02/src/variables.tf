@@ -54,10 +54,19 @@ variable "db_cidr" {
 }  
 ###ssh vars
 
-variable "vms_ssh_root_key" {
-  type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMN6eyZjx9yr2fdKQt2DU3kmnPdXYVZNZvrHeCleepG/ eugene@Ubuntu22LTS"
-  description = "ssh-keygen -t ed25519"
+#variable "vms_ssh_root_key" {
+#  type        = string
+#  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMN6eyZjx9yr2fdKQt2DU3kmnPdXYVZNZvrHeCleepG/ eugene@Ubuntu22LTS"
+#  description = "ssh-keygen -t ed25519"
+#}
+
+variable "vms_metadata" {
+  type = map(string)
+  default = {
+    "serial-port-enable" = "1"
+    "ssh-keys"           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMN6eyZjx9yr2fdKQt2DU3kmnPdXYVZNZvrHeCleepG/ eugene@Ubuntu22LTS"
+  }
+  description = "ssh-keygen  vms_metadata"
 }
 
 variable "project" {  default = "netology-develop-platform"}
