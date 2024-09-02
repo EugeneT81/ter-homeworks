@@ -126,4 +126,19 @@ resource "yandex_compute_instance" "platform2" {
 
 
 
+Задание 6
+
+
+![alt text](vms_resources.png)
+
+
+![alt text](<metadata .png>)
+
+
+![alt text](resources1.png)
+
+
+![alt text](resources2.png)
+
+
 
