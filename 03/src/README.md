@@ -24,3 +24,9 @@
 
 
 Задача 4
+
+![alt text](5_VMs.png)
+
+[ansible.tftpl](ansible.tftpl)
+
+[hosts.cfg](hosts.cfg)
