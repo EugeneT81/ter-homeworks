@@ -30,3 +30,33 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+
+variable "web_vm_settings" {
+  type = object({
+    platform_id   = string,
+    core_count    = number,
+    core_fraction = number,
+    memory_count  = number,
+    hdd_size      = number,
+    hdd_type      = string,
+    preemptible   = bool,
+    nat           = bool
+  })
+  default = {
+    core_count    = 2,
+    core_fraction = 5,
+    memory_count  = 1,
+    hdd_size      = 5,
+    hdd_type      = "network-hdd",
+    platform_id   = "standard-v1",
+    preemptible   = true,
+    nat           = true
+  }
+}
+
+
+
+variable "each_vm" {
+  type = list(object({cores = number, name = string, memory=number, core_fraction=number, preemptible   = bool, platform_id = string}))
+  default = [{name = "main", cores= 2, memory=2, core_fraction=5, preemptible   = true, platform_id   = "standard-v1"}, {name = "replica", cores= 2, memory= 1, core_fraction=5, preemptible   = true, platform_id   = "standard-v1"}]  
+}
