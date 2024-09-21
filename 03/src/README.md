@@ -6,13 +6,13 @@
 
 Задача 2
 
-[text](locals.tf)
+[locals.tf](locals.tf)
 
 
-[text](count-vm.tf)
+[count-vm.tf](count-vm.tf)
 
 
-[text](for_each-vm.tf)
+[for_each-vm.tf](for_each-vm.tf)
 
 ![alt text](4_VMs.png)
 
