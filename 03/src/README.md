@@ -18,5 +18,9 @@
 
 Задача 3
 
+![alt text](3_disks.png)
+
+[text](disk_vm.tf)
+
 
 Задача 4
