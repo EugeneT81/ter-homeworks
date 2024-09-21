@@ -25,6 +25,8 @@
 
 Задача 4
 
+[ansible.tf](ansible.tf)
+
 ![alt text](5_VMs.png)
 
 [ansible.tftpl](ansible.tftpl)
