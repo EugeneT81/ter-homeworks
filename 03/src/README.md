@@ -20,7 +20,7 @@
 
 ![alt text](3_disks.png)
 
-[text](disk_vm.tf)
+[disk_vm.tf](disk_vm.tf)
 
 
 Задача 4
