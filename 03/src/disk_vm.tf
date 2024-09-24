@@ -20,9 +20,9 @@ resource "yandex_compute_instance" "storage" {
   }
 
   dynamic "secondary_disk" {
-   for_each = { for stor in yandex_compute_disk.for_storage[*]: stor.name=> stor }
+   for_each = yandex_compute_disk.for_storage.*.id
    content {
-     disk_id = secondary_disk.value.id
+     disk_id = secondary_disk.value
    }
   }
   network_interface {
